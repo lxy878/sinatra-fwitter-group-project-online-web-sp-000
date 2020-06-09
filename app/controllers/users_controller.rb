@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     if new_user.username.empty? or new_user.email.empty? or !new_user.save
       redirect '/signup'
     end
+    session[:user_id] = new_user.id
     redirect '/tweets'
   end
 
