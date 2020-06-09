@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
   def slug
       self.username.split(' ').join('-')
   end
+
+  def self.find_by_slug(name)
 end
