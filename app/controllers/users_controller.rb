@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   get '/signup' do
-    if session.has?(:user_id)
+    if session.has_key?(:user_id)
       redirect '/tweets'
     end
     erb :'users/create_user'
