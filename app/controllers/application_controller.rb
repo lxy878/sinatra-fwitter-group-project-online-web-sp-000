@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
   helpers do
     def current_user
-      User.find(session[:dep_id]) if session[:dep_id]
+      User.find(session[:user_id]) if session[:user_id]
     end
 
     def logged_in?
