@@ -23,7 +23,6 @@ class ApplicationController < Sinatra::Base
 
     def authentication_required
         if !logged_in?
-            flash[:authenticate_error] = '* You must log in.'
             redirect '/'
         end
     end
