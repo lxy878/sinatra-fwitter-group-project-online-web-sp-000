@@ -13,6 +13,8 @@ class ApplicationController < Sinatra::Base
     erb :'index'
   end
   helpers do
-    login?
+    def login?
+      session.has_key?(:user_id)
+    end
   end
 end
