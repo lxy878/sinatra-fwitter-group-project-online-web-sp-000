@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   get '/login' do
-    if session.has_key?(:user_id)
+    if login
       redirect '/tweets'
     end
     erb :'users/login'
