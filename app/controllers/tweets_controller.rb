@@ -17,6 +17,6 @@ class TweetsController < ApplicationController
       redirect '/tweets/new'
     end
     params[:user_id] || = current_user.id
-    Tweet.create(params)
+    new_tweet = Tweet.create(params)
   end
 end
