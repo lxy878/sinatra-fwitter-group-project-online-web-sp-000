@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
     self.username.split(' ').join('-')
   end
 
-  def self.find_by_slug(name)
-    
+  def self.find_by_slug(slug)
+    self.all.find {|obj| obj.slug == slug}
   end
 end
