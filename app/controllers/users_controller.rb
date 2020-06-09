@@ -48,5 +48,6 @@ class UsersController < ApplicationController
 
   get '/users/:slug' do
     @user = current_user
+    
   end
 end
