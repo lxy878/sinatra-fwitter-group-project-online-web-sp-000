@@ -13,6 +13,8 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
+    if !params[:content].empty?
 
+    end
   end
 end
