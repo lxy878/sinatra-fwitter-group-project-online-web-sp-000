@@ -13,12 +13,12 @@ class ApplicationController < Sinatra::Base
     erb :'index'
   end
   helpers do
-    def current_dep
+    def current_user
       User.find(session[:dep_id]) if session[:dep_id]
     end
 
     def logged_in?
-        !!current_dep
+        !!current_user
     end
 
     def authentication_required
