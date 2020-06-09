@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  before '/tweet*' do
+    authentication_required
+  end
+  
   get '/signup' do
     if logged_in?
       redirect '/tweets'
