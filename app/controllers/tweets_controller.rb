@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   get '/tweets' do
-    'Welcome tweets'
+    'Welcome, tweets'
   end
 
 
