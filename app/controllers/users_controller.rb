@@ -43,6 +43,6 @@ class UsersController < ApplicationController
   end
 
   get '/users/:slug' do
-    
+    @user = current_user
   end
 end
