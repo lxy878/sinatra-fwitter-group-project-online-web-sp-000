@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def slug
-    self.username
+      self.username.split(' ').join('-')
   end
 end
