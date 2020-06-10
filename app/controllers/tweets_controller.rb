@@ -16,6 +16,7 @@ class TweetsController < ApplicationController
     if params[:content].empty?
       redirect '/tweets/new'
     end
+    binding.pry
     params[:user_id] = current_user.id
     new_tweet = Tweet.create(params)
     redirect '/tweets'
