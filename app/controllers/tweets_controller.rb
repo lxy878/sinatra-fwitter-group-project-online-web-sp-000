@@ -5,7 +5,6 @@ class TweetsController < ApplicationController
 
   get '/tweets' do
     @user = current_user
-    binding.pry
     erb :'tweets/tweets'
   end
 
