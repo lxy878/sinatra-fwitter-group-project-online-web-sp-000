@@ -15,6 +15,7 @@ class ApplicationController < Sinatra::Base
 
   helpers do
     def current_user
+      binding.pry
       User.find(session[:user_id]) if session[:user_id]
     end
 
