@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
     if !params[:content].empty?
       redirect '/tweets/new'
     end
-    params[:user_id]|| = current_user.id
+    params[:user_id] = current_user.id
     new_tweet = Tweet.create(params)
     redirect '/tweets'
   end
